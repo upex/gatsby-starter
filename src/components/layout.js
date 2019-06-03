@@ -1,23 +1,53 @@
 import React from "react"
-import { Link } from "gatsby"
-const ListLink = props => (
-  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-    <Link to={props.to}>{props.children}</Link>
-  </li>
-)
+import ListLink from "./link"
+import User from "./user"
+import layoutStyles from "./layout.module.css"
+import profile from '../images/profile.jpg'
+import logo from '../images/logo.png'
+import { FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 export default ({ children }) => (
-  <div style={{ margin: `3rem auto`, maxWidth: `80%`, padding: `0 1rem` }}>
-    <header style={{ marginBottom: `1.5rem` }}>
-      <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-        <h3 style={{ display: `inline` }}>MySweetSite</h3>
-      </Link>
-      <ul style={{ listStyle: `none`, float: `right` }}>
-        <ListLink to="/">Home</ListLink>
-        <ListLink to="/about/">About</ListLink>
+  <div className={layoutStyles.container}>
+    <header className={layoutStyles.header}>
+      <div className={layoutStyles.inner}>
+        <User
+          logo={logo}
+          avatar={profile}
+        />
+        <h3>
+          FullStack Javascript Engineer. Agile minded. Risk taker. Wannabe Chef.
+        </h3>
+      </div>
+      <ul className={layoutStyles.ul}>
+        <ListLink to="/">Blog</ListLink>
+        <ListLink to="/resume/">Resume</ListLink>
         <ListLink to="/contact/">Contact</ListLink>
       </ul>
+      <footer>
+          <ul className={layoutStyles.social}>
+            <li>
+              <a href="https://twitter.com/webforest_in" target="blank">
+                <span className="material-icons"><FaTwitter/></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/upex" target="blank">
+              <span className="material-icons"><FaGithub /></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/upen-panging/" target="blank">
+                <span className="material-icons"><FaLinkedinIn /></span>
+              </a>
+            </li>
+          </ul>
+          <ul className={layoutStyles.copyright}>
+            <li>&copy; upen.tech</li>
+          </ul>
+      </footer>
     </header>
-    {children}
+    <div className={layoutStyles.main}>
+      {children}
+    </div>
   </div>
 )

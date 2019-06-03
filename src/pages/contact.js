@@ -3,9 +3,10 @@ import Layout from "../components/layout"
 
 export default () => (
   <Layout>
-    <h1>I'd love to talk! Email me at the address below</h1>
+    <h3>Do you want to collaborate?</h3>
+    <p>Would you like to collaborate on a project or work together in some challenging stuff? I'd love to help! Email me at the address below</p>
     <p>
-      <a href="mailto:me@example.com">me@example.com</a>
+      <a href="mailto:upenpanging@gmail.com">upenpanging@gmail.com</a>
     </p>
   </Layout>
 )
