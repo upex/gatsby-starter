@@ -24,15 +24,6 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
-    },
-    {
-      resolve: 'gatsby-plugin-google-fonts',
-      options: {
-        fonts: [
-          'material icons',
-          'roboto:300,400,500,700',
-        ],
-      },
-    },
+    }
   ]
 }

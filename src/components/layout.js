@@ -16,9 +16,9 @@ export default ({ children }) => (
           logo={logo}
           avatar={profile}
         />
-        <h3>
+        <h2>
           FullStack Javascript Engineer. Agile minded. Risk taker. Wannabe Chef.
-        </h3>
+        </h2>
       </div>
       <ul className={layoutStyles.ul}>
         <ListLink to="/">Blog</ListLink>
@@ -29,17 +29,17 @@ export default ({ children }) => (
           <ul className={layoutStyles.social}>
             <li>
               <a href="https://twitter.com/webforest_in" target="blank">
-                <span className="material-icons"><FaTwitter/></span>
+                <FaTwitter/>
               </a>
             </li>
             <li>
               <a href="https://github.com/upex" target="blank">
-              <span className="material-icons"><FaGithub /></span>
+               <FaGithub />
               </a>
             </li>
             <li>
               <a href="https://www.linkedin.com/in/upen-panging/" target="blank">
-                <span className="material-icons"><FaLinkedinIn /></span>
+                <FaLinkedinIn />
               </a>
             </li>
           </ul>

@@ -78,8 +78,9 @@ p {
     flex-grow: 1;
     margin: 0 0 2em 0;
   }
-  .header > .inner h3 {
-    color: #ddd
+  .header > .inner h2 {
+		color: #ddd;
+		font-family: 'Quattrocento Sans',sans-serif!important;
   }
 
   .avatar {
