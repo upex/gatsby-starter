@@ -10,5 +10,7 @@ This post is all about creating responsive website from scratch. While talking a
 For example see the below code:
 
 ```
-@media screen and (min-width:320px) and (max-width:480px) {/*Style declarations for this width range */}
+@media screen and (min-width:320px) and (max-width:480px) {
+/*Style declarations for this width range */
+}
 ```
