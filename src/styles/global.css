@@ -5,7 +5,7 @@ html, body {
 }
 .material-icons {
   font-family: 'Material Icons';
-  font-size: 18px;
+  font-size: 18px!important;
 }
 a:hover {
   border-bottom-color: transparent;

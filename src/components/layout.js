@@ -44,7 +44,7 @@ export default ({ children }) => (
             </li>
           </ul>
           <ul className={layoutStyles.copyright}>
-            <li>&copy; upen.tech</li>
+            <li>&copy; upenpanging.in</li>
           </ul>
       </footer>
     </header>

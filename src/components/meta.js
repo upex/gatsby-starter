@@ -15,6 +15,9 @@ const SEO = ({ title, description, image, pathname, article }) => (
           siteUrl,
           defaultImage,
           twitterUsername,
+          keywords,
+          type,
+          author
         },
       },
     }) => {
@@ -23,6 +26,9 @@ const SEO = ({ title, description, image, pathname, article }) => (
         description: description || defaultDescription,
         image: `${siteUrl}${image || defaultImage}`,
         url: `${siteUrl}${pathname || "/"}`,
+        keywords,
+        type,
+        author
       }
 
       return (
@@ -30,12 +36,11 @@ const SEO = ({ title, description, image, pathname, article }) => (
           <Helmet title={seo.title} titleTemplate={titleTemplate}>
             <meta name="title" content={seo.title}/>
             <meta name="description" content={seo.description} />
-            <meta name="author" content="Upen Panging"/>
-            <meta name="keywords" content="" />
+            <meta name="author" content={seo.author}/>
+            <meta name="keywords" content={seo.keywords} />
             <meta name="image" content={seo.image} />
             {seo.url && <meta property="og:url" content={seo.url} />}
-            <meta property="og:type" content="website" />
-            <meta name="author" content="Upen Panging"></meta>
+            <meta property="og:type" content={seo.type} />
             {(article ? true : null) && (
               <meta property="og:type" content="article" />
             )}
@@ -53,7 +58,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
               <meta name="twitter:description" content={seo.description} />
             )}
             {seo.image && <meta name="twitter:image" content={seo.image} />}
-            <link rel="canonical" href="https://upenpanging.in/" />
+            <link rel="canonical" href={seo.url} />
           </Helmet>
         </>
       )
@@ -65,10 +70,13 @@ export default SEO
 
 SEO.propTypes = {
   title: PropTypes.string,
+  type: PropTypes.string,
   description: PropTypes.string,
+  keywords: PropTypes.string,
   image: PropTypes.string,
   pathname: PropTypes.string,
   article: PropTypes.bool,
+  author:  PropTypes.string
 }
 
 SEO.defaultProps = {
@@ -76,7 +84,10 @@ SEO.defaultProps = {
   description: null,
   image: null,
   pathname: null,
+  keywords: null,
   article: false,
+  type: null,
+  author: null
 }
 
 const query = graphql`
@@ -86,9 +97,12 @@ const query = graphql`
         defaultTitle: title
         titleTemplate
         defaultDescription: description
+        keywords
         siteUrl: url
         defaultImage: image
-        twitterUsername
+        twitterUsername,
+        type,
+        author
       }
     }
   }`
