@@ -1,4 +1,5 @@
 import React from "react"
+import Meta from "./meta"
 import ListLink from "./link"
 import User from "./user"
 import layoutStyles from "./layout.module.css"
@@ -8,6 +9,7 @@ import { FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 export default ({ children }) => (
   <div className={layoutStyles.container}>
+    <Meta />
     <header className={layoutStyles.header}>
       <div className={layoutStyles.inner}>
         <User
