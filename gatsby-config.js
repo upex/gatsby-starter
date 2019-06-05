@@ -25,6 +25,14 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `_posts`,
+        name: '_posts',
+      },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-plugin-netlify-cms`
   ]
 }

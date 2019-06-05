@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: A thought on Responsive Web Design
-date: 2019-06-05T21:12:35.490Z
+date: 2019-06-02T21:12:35.490Z
 thumbnail: /images/top-home-interior-designer-01.jpg
 rating: 5
 ---
