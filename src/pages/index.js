@@ -27,15 +27,15 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            layout
-            rating
-            thumbnail
             title
+            thumbnail
             date(formatString: "DD MMMM, YYYY")
           }
-          excerpt(pruneLength: 400)
-          html
+          excerpt(pruneLength: 200)
           timeToRead
+          fields {
+            slug
+          }
         }
       }
     }

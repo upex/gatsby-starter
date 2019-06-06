@@ -1,23 +1,22 @@
 import React from "react"
-// import styles from "./blog.module.css"
+import Post from "./post"
+import ListLink from "./link"
+import styles from "./blog.module.css"
 
 export default (props) => {
-  console.log(props.data);
   return (
     <div>
-     <h3>{props.data.allMarkdownRemark.totalCount} Posts</h3>
+     <ul className={styles.ul}>
+        <ListLink to="/">Blog</ListLink>
+     </ul>
      {props.data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id}>
-          <img src={node.frontmatter.thumbnail} alt={node.frontmatter.title} />
-          <h3>
-            {node.frontmatter.title}{" "}
-            <span>
-              — {node.frontmatter.date}
-            </span>
-          </h3>
-          <p>{node.excerpt}</p>
-          <div dangerouslySetInnerHTML={{ __html: node.html }} />
-        </div>
+          <Post
+          key={node.id}
+          date= { node.frontmatter.date }
+          slug= { node.fields.slug }
+          thumbnail= { node.frontmatter.thumbnail }
+          title={node.frontmatter.title}
+          excerpt={ node.excerpt }  />
       ))}
     </div>
   )
