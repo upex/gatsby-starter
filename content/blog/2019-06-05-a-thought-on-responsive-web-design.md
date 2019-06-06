@@ -169,4 +169,6 @@ For proper rendering in IE 6-8, we can have a quick fix like below :
 /* more css */
 ```
 
+
+
 Hopefully this post will give a brief idea about responsive web design and media queries. Cheers!
