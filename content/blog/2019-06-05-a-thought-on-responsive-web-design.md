@@ -62,12 +62,6 @@ For proper rendering in IE 6-8, we can have a quick fix like below :
 ```
 /*other styling */
 @media screen and (max-width:320px){
-  body{
-     padding:5px;
-  }
-  #wrapper{
-     width:100%;
-  }
   .smalllogo{
     display:block;
   }
@@ -95,83 +89,20 @@ For proper rendering in IE 6-8, we can have a quick fix like below :
     padding:0;
   }
 }
-@media screen and (min-width:319px) and (max-width:479px){
-  body{
-    padding:5px;  
-  }
-  #wrapper{
-    width:100%;
-  }
-  .smalllogo{
-    display:block;
-  }
-  .smalllogo img{
-    width:100px;
-    height:100px;
-  }
-  .biglogo{
-    display:none;
-  }
-  header nav{
-    float:left;
-  }
-  h1.resezie{
-    font-size:.9rem;
-  }
-  h1.resezie2{
+------------
+@media screen and (min-width:1024px) and (max-width:1200px){
+  h1.resezie6{
     display:block;
     font-size:.9rem;
-    background:#00FFCC;
+    background:#FFFF00;
   }
   .work-item1, .work-item2, .work-item3, .work-item4{
-    width:100%;
-    max-width:100%;
-    padding:0;
-  }
-}
-@media screen and (min-width:480px) and (max-width:767px){
-  body{
-    padding:5px;  
-  }
-  #wrapper{
-    width:100%;
-  }
-  h1.resezie{
-    font-size:.9rem;
-  }
-  h1.resezie3{
-    display:block;
-    font-size:.9rem;
-    background:#6600FF;
-    color:#fff;
-  }
-  .work-item1, .work-item2, .work-item3, .work-item4{
-    width:100%;
-    max-width:100%;
-    padding:0;
-  }
-}
-  body{
-  padding:5px;  
-  }
-  #wrapper{
-    width:100%;
-  }
-
-  h1.resezie{
-    font-size:.9rem;
-  }
-  h1.resezie4{
-    display:block;
-    font-size:.9rem;
-    background:#FF3300;
-  }
-  .work-item1, .work-item2, .work-item3, .work-item4{
-    width:44%;
-    padding: 0 2% 1%;
+    width:31%;
+    padding: 0 1% 1%;
     float:left;
   }
 }
+------------
 /* more css */
 ```
 
