@@ -17,7 +17,7 @@ export default ({ children }) => (
           avatar={profile}
         />
         <h2>
-          FullStack Javascript Engineer. Agile minded. Risk taker. Wannabe Chef.
+          FullStack Javascript Engineer. Agile minded. Risk taker. Occasional Chef.
         </h2>
       </div>
       <ul className={layoutStyles.ul}>

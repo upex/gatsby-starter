@@ -59,7 +59,7 @@ export default () => (
         <p>Designed and developed core features of the software from scratch single handedly.</p>
       </li>
     </ul>
-    <p><strong>5. Software Developer at Swagatam Real estate (Dec 2012 – Oct 2013)</strong></p>
+    <p><strong>5. Software Developer at Swagatam Real Estate (Dec 2012 – Oct 2013)</strong></p>
     <ul>
       <li>
         <strong>Swagatam ERP management system</strong>

@@ -1,12 +1,43 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Blog from "../components/blog"
 
-export default () => (
+export default ( { data }) => {
+  return (
   <Layout>
-    <h3>Hi! I'm building a fake Gatsby site as part of a tutorial!</h3>
-    <p>
-      What do I like to do? Lots of course but definitely enjoy building
-      softwares.
-    </p>
+    <Blog data={ data }/>
   </Layout>
 )
+}
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 10) {
+      totalCount
+      pageInfo {
+        currentPage
+        hasNextPage
+        hasPreviousPage
+        itemCount
+        pageCount
+        perPage
+      }
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            thumbnail
+            date(formatString: "DD MMMM, YYYY")
+          }
+          excerpt(pruneLength: 200)
+          timeToRead
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`

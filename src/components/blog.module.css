@@ -1,0 +1,16 @@
+.ul {
+  list-style: none;
+  margin: 0 0 1em 0;
+}
+.ul li {
+  display: inline-block;
+	margin-right: 1rem;
+}
+.ul li a {
+  text-decoration: none;
+  background-image: none;
+	text-shadow: none;
+	color: #1ca086;
+	font-size: 1.5rem!important;
+	font-weight: bold;
+}
