@@ -1,6 +1,6 @@
 ---
 title: A thought on Responsive Web Design
-date: 2019-06-04T21:12:35.490Z
+date: 2019-06-06T21:12:35.490Z
 category:
   - Responsive web design
 thumbnail: /images/top-home-interior-designer-01.jpg
