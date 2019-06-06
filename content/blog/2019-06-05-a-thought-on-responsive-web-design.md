@@ -51,6 +51,12 @@ In our demo we are creating a mobile first website but in order to accomplish th
 
 For proper rendering in IE 6-8, we can have a quick fix like below :
 
+```
+<!--[if lt IE 9]>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+```
+
 **mediaqueries.css :**
 
 ```
@@ -168,7 +174,5 @@ For proper rendering in IE 6-8, we can have a quick fix like below :
 }
 /* more css */
 ```
-
-
 
 Hopefully this post will give a brief idea about responsive web design and media queries. Cheers!
