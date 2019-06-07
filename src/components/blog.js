@@ -16,6 +16,7 @@ export default (props) => {
           slug= { node.fields.slug }
           thumbnail= { node.frontmatter.thumbnail }
           title={node.frontmatter.title}
+          timeToRead={node.timeToRead}
           excerpt={ node.excerpt }  />
       ))}
     </div>

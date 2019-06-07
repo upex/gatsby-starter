@@ -298,14 +298,14 @@ p {
 				padding-left: 2em;
 			}
 
-				ul.labeled-icons li h3 {
-					line-height: 1.75em;
-				}
+			ul.labeled-icons li h3 {
+				line-height: 1.75em;
+			}
 
 		/* Header */
 
 			.header {
-				padding: 2.25em 1.5em;
+				padding: 1.5em;
 			}
 
 				.header h1 {
@@ -321,7 +321,7 @@ p {
 		/* Main */
 
 			.main {
-				padding: 2.25em 1.5em 0.25em 1.5em;
+				padding: 2.25em .5em 0.25em .5em!important;
 			}
 
       .main > section {
@@ -338,7 +338,7 @@ p {
 		/* Header */
 
 			.header {
-				padding: 4.5em 1.5em;
+				padding: 1.5em;
 			}
 
       .header h1 br {
@@ -353,6 +353,9 @@ p {
 				line-height: 2.25em;
 				margin-left: 0;
 				padding-left: 0;
+			}
+			.main {
+				padding: 2.25em .5em 0.25em .5em!important;
 			}
 
 	}
