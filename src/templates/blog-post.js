@@ -15,12 +15,12 @@ export default ( { data }) => {
       image={ post.frontmatter.thumbnail }
       pathname={ post.fields.slug}
       article={ true} />
-      <div>
+      <div className={ styles.blog }>
         <ul className={styles.ul}>
             <ListLink to="/">Blog</ListLink>
         </ul>
         <h3>{post.frontmatter.title}</h3>
-        <strong>{post.frontmatter.date}</strong>
+        <p className={styles.date}><strong>{post.frontmatter.date}</strong> <span className={styles.timeToRead}><em>{post.timeToRead > 1 ? `${post.timeToRead} mins` : `${post.timeToRead} mins`}</em></span></p>
         <div className={styles.featureimage}>
           <img src={post.frontmatter.thumbnail} alt={post.frontmatter.title} />
         </div>
@@ -40,6 +40,7 @@ export const query = graphql`
         thumbnail
       }
       excerpt(pruneLength: 200)
+      timeToRead
       fields {
         slug
       }
