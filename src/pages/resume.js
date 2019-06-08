@@ -12,6 +12,7 @@ export default () => (
 
     <p><strong>Frontend Development: </strong>HTML5, CSS3, Javascript(ES5/ES6), Angular, Vue, Vuex, React, Redux, GatsbyJs, Material UI, Bootstrap, Vuetify, Jquery, Responsive Design</p>
     <p><strong>Backend Development: </strong>Nodejs, Express, RESTful API, MongoDB, JSON</p>
+    <p><strong>Build & workflow Tools: </strong>Gulp, Webpack, Github, Bitbucket, Jira</p>
     <p><strong>Hosting & Deployments: </strong>AWS, DigitalOcean, Netlify</p>
 
     <h3>Work</h3>
