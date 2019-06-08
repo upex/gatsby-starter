@@ -30,7 +30,7 @@ export default () => (
       </li>
     </ul>
 
-    <p><strong>3. Sr. Software Engineer at Action Labs May 2014 - Dec 2016</strong></p>
+    <p><strong>3. Sr. Software Engineer at Accionlabs Inc May 2014 - Dec 2016</strong></p>
     <ul>
       <li>
         <strong>Product Development for an Insurance Company (Nov 2015 – Dec 2016)</strong>
