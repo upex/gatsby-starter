@@ -17,7 +17,7 @@ const Post = props => (
         <div className={styles.stats}>
           <ul>
             <li>{props.date}</li>
-            <li><em>{props.timeToRead > 1 ? `${props.timeToRead} mins` : `${props.timeToRead} mins`}</em></li>
+            <li><em>{props.timeToRead > 1 ? `${props.timeToRead} mins` : `${props.timeToRead} min`}</em></li>
           </ul>
         </div>
       </footer>

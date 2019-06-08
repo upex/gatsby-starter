@@ -20,7 +20,7 @@ export default ( { data }) => {
             <ListLink to="/">Blog</ListLink>
         </ul>
         <h3>{post.frontmatter.title}</h3>
-        <p className={styles.date}><strong>{post.frontmatter.date}</strong> <span className={styles.timeToRead}><em>{post.timeToRead > 1 ? `${post.timeToRead} mins` : `${post.timeToRead} mins`}</em></span></p>
+        <p className={styles.date}><strong>{post.frontmatter.date}</strong> <span className={styles.timeToRead}><em>{post.timeToRead > 1 ? `${post.timeToRead} mins` : `${post.timeToRead} min`}</em></span></p>
         <div className={styles.featureimage}>
           <img src={post.frontmatter.thumbnail} alt={post.frontmatter.title} />
         </div>
