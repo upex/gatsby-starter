@@ -30,6 +30,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
         type,
         author
       }
+      const ogType = article ? `article` : seo.type
 
       return (
         <>
@@ -40,10 +41,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
             <meta name="keywords" content={seo.keywords} />
             <meta name="image" content={seo.image} />
             {seo.url && <meta property="og:url" content={seo.url} />}
-            <meta property="og:type" content={seo.type} />
-            {(article ? true : null) && (
-              <meta property="og:type" content="article" />
-            )}
+            <meta property="og:type" content={ogType} />
             {seo.title && <meta property="og:title" content={seo.title} />}
             {seo.description && (
               <meta property="og:description" content={seo.description} />

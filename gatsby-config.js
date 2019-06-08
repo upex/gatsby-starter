@@ -7,7 +7,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Upen Panging.FullStack Javascript Engineer. Agile minded. Risk taker. Wannabe Chef.`,
+    title: `Upen Panging.FullStack Javascript Engineer. Agile minded. Risk taker. Occasional Chef.`,
     titleTemplate: "%s",
     url: `https://upenpanging.in`,
     image: `/profile.jpg`,
