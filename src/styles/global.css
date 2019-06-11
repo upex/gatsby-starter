@@ -9,3 +9,10 @@ a:hover {
   color: #49bf9d !important;
   text-decoration: none;
 }
+.gatsby-image-wrapper {
+  width: 100%;
+}
+
+.gatsby-image-wrapper > img {
+  position: relative !important;
+}
