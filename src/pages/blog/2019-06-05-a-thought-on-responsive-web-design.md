@@ -42,7 +42,7 @@ For example see the below code:
 }
 ```
 
-## See the [DEMO](http://jsfiddle.net/upenpanging/Ldsj1cz2/1/embedded/result/) here.
+**See the** [**DEMO**](http://jsfiddle.net/upenpanging/Ldsj1cz2/1/embedded/result/) **here.**
 
 In our demo we are creating a mobile first website but in order to accomplish that don’t forget to add the following viewport meta tag to your head of the document which ensures proper rendering.
 
@@ -58,7 +58,7 @@ For proper rendering in IE 6-8, we can have a quick fix like below :
 <![endif]-->
 ```
 
-**mediaqueries.css :**
+**mediaqueries.css**  for the above demo example looks something like below: 
 
 ```
 /*other styling */
