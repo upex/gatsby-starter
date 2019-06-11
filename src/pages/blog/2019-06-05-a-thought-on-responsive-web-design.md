@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: A thought on Responsive Web Design
 date: 2019-06-05T21:12:35.490Z
 category:

@@ -18,49 +18,59 @@ module.exports = {
     author: "Upen Panging"
   },
   plugins: [
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-relative-images',
+          },
+          {
+            resolve: 'gatsby-remark-images'
+          },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: 'static',
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`
+          }
+        ],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `content`,
-        name: 'content',
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/static/images`,
         name: 'uploads',
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/images`,
         name: 'images',
       },
     },
+    `gatsby-plugin-netlify-cms`,
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-typography`,
       options: {
-        plugins: [
-          `gatsby-remark-prismjs`
-        ]
-      }
-    },
-    `gatsby-plugin-netlify-cms`
+        pathToConfigModule: `src/utils/typography`,
+      },
+    }
   ]
 }
