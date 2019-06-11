@@ -1,21 +1,17 @@
 import React from "react"
 import styles from "./post.module.css"
 import ListLink from "./link"
-import Img from 'gatsby-image'
+import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 const Post = props => (
   <div className={styles.post}>
     <div className={styles.thumbnail}>
-     {!!props.thumbnail && !!props.thumbnail.childImageSharp
-        ? <Img
-          fluid={props.thumbnail.childImageSharp.fluid}
-          alt={props.title}
-          />
-        : <img
-          src={props.thumbnail.publicURL}
-          alt={props.title} 
-          />
-      }
+      <PreviewCompatibleImage
+        imageInfo={{
+          image: props.thumbnail,
+          alt: props.title
+        }}
+      />
     </div>
     <div className={styles.description}>
       <h4 className={styles.title}>{props.title}</h4>

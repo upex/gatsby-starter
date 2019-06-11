@@ -13,7 +13,10 @@ export default ( { data }) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+      ) {
       totalCount
       pageInfo {
         currentPage
@@ -30,8 +33,9 @@ export const query = graphql`
             title
             thumbnail {
               childImageSharp {
-                fluid(maxWidth: 630) {
+                fluid(maxWidth: 500, quality: 100) {
                   ...GatsbyImageSharpFluid
+                  presentationWidth
                 }
               }
               publicURL

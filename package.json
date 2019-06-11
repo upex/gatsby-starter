@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm run clean && gatsby build",
     "clean": "rimraf .cache public",
-    "develop": "gatsby develop",
+    "develop": "npm run clean && gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
