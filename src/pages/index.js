@@ -34,7 +34,7 @@ export const query = graphql`
             thumbnail {
               childImageSharp {
                 fluid(maxWidth: 500, quality: 100) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_noBase64
                   presentationWidth
                 }
               }
