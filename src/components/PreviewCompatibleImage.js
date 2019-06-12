@@ -4,14 +4,13 @@ import Img from "gatsby-image"
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
   const imageStyle = { borderRadius: '5px' }
-  const { alt = '', childImageSharp, image, className } = imageInfo
+  const { alt = '', childImageSharp, image } = imageInfo
 
   if (!!image && !!image.childImageSharp) {
     return (
       <Img
       fluid={image.childImageSharp.fluid}
       alt={alt}
-      className={className}
       />
     )
   }
@@ -20,7 +19,7 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
     return <Img
     fluid={childImageSharp.fluid}
     alt={alt}
-    className={className}/>
+    />
   }
 
   if (!!image && typeof image === 'string')
