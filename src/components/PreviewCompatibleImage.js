@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Img from "gatsby-image/withIEPolyfill"
+import Img from "gatsby-image"
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
   const imageStyle = { borderRadius: '5px' }
@@ -9,21 +9,17 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
   if (!!image && !!image.childImageSharp) {
     return (
       <Img
-      style={imageStyle}
       fluid={image.childImageSharp.fluid}
       alt={alt}
-      objectFit="cover"
-      objectPosition="50% 50%"/>
+      />
     )
   }
 
   if (!!childImageSharp) {
     return <Img
-    style={imageStyle}
     fluid={childImageSharp.fluid}
     alt={alt}
-    objectFit="cover"
-    objectPosition="50% 50%"/>
+    />
   }
 
   if (!!image && typeof image === 'string')
