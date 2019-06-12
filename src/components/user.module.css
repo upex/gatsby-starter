@@ -7,13 +7,18 @@
 .user:last-child {
   margin-bottom: 0;
 }
-
-.avatar {
-  flex: 0 0 96px;
-  width: 6.25em;
-  height: 6.7em;
-  border-radius: 100%;
-  margin: 0;
+.avatarwrapper {
+  width: 6.25em!important;
+}
+.avatar img {
+  flex: 0 0 96px!important;
+  width: 6.25em!important;
+  height: 6.7em!important;
+  border-radius: 100%!important;
+  margin: 0!important;
+}
+.avatar > div {
+  padding: 0!important;
 }
 
 .description {

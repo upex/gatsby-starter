@@ -1,24 +1,22 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import styles from "./user.module.css"
-import PreviewCompatibleImage from './PreviewCompatibleImage'
-
+import ImgPreview from "gatsby-image"
+import logo from '../images/logo.png'
 const User = ({ data, ...props}) => {
   return (
     <div className={styles.user}>
-      <PreviewCompatibleImage
-        imageInfo={{
-          image: data.profile,
-          alt: `upen panging profile image`,
-          className: styles.avatar 
-        }}
-      />
+      <div className={styles.avatarwrapper}>
+        <ImgPreview
+        fluid={data.profile.childImageSharp.fluid}
+        alt={`upen panging profile image`}
+        className={styles.avatar}
+        />
+      </div>
       <div className={styles.description}>
-        <PreviewCompatibleImage
-          imageInfo={{
-            image: data.logo,
-            alt: `upen panging logo image`
-          }}
+        <img
+        src={logo}
+        alt=""
         />
       </div>
     </div>
@@ -37,7 +35,7 @@ export default (props) => (
         }
         logo: file(relativePath: { eq: "logo.png" }) {
           childImageSharp {
-            fluid(maxWidth: 400) {
+            fluid(maxWidth: 200, maxHeight: 40) {
               ...GatsbyImageSharpFluid
             }
           }
