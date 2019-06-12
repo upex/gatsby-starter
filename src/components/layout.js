@@ -1,10 +1,8 @@
 import React from "react"
 import Meta from "./meta"
 import ListLink from "./link"
-import User from "./user"
+import Profile from "./user"
 import layoutStyles from "./layout.module.css"
-import profile from '../images/profile.jpg'
-import logo from '../images/logo.png'
 import { FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 export default ({ children }) => (
@@ -12,10 +10,7 @@ export default ({ children }) => (
     <Meta />
     <header className={layoutStyles.header}>
       <div className={layoutStyles.inner}>
-        <User
-          logo={logo}
-          avatar={profile}
-        />
+        <Profile />
         <h2>
           FullStack Javascript Engineer. Agile minded. Risk taker. Occasional Chef.
         </h2>
