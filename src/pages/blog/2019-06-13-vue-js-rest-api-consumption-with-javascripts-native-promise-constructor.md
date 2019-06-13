@@ -5,7 +5,7 @@ date: 2019-06-13T14:01:54.618Z
 category:
   - Vue
   - SPA
-thumbnail: /images/vue.png
+thumbnail: /images/vuejs.png
 featuredpost: true
 ---
 Vue doesn't have its own http module, but we can easily make http requests by combining the Vue Resource module and javascript's native new Promise constructor. Vue Resource exposes a $http instance which can be accessed throughout the Vue instance.
@@ -22,11 +22,8 @@ vue create my-rest-app
 
 ```
 cd my-rest-app
-
 yarn add vue-resource
-
 Or
-
 npm install vue-resource
 ```
 
@@ -158,4 +155,4 @@ export default {
 
 The final code could be found here [source](https://github.com/upex/vue-rest-api).
 
-This shows how easily we can consume rest api's in our Vue applications.
+This shows how easily we can consume rest api's in our Vue applications. Cheers!
