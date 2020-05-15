@@ -17,7 +17,7 @@ export default ({ children }) => (
       </div>
       <ul className={layoutStyles.ul}>
         <ListLink to="/">Blog</ListLink>
-        <ListLink to="/resume/">Resume</ListLink>
+        <ListLink to="/about-me/">About me</ListLink>
         <ListLink to="/contact/">Contact</ListLink>
       </ul>
       <footer>
