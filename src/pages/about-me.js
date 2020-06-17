@@ -10,8 +10,8 @@ export default () => (
 
     <h3>Skills</h3>
 
-    <p><strong>Frontend Development: </strong>HTML5, CSS3, Javascript(ES5/ES6), Angular, Vue, Vuex, React, Apollo Client, Redux, GatsbyJs, Material UI, Bootstrap, Vuetify, Jquery, Responsive Design</p>
-    <p><strong>Backend Development: </strong>Python, Nodejs, Express, GraphQL, Apollo Server, RESTful API, MongoDB, JSON</p>
+    <p><strong>Frontend Development: </strong>HTML5, CSS3, Javascript(ES5/ES6), Angular, Vue, React, React native, Apollo Client, Redux, GatsbyJs, Material UI, Bootstrap, Vuetify, Jquery, Responsive Design</p>
+    <p><strong>Backend Development: </strong>Python, Nodejs, Express, GraphQL, Apollo Server, RESTful API, Postgresql, MongoDB, JSON</p>
     <p><strong>Build & workflow Tools: </strong>Gulp, Webpack, Github, Bitbucket, Jira</p>
     <p><strong>Hosting & Deployments: </strong>AWS, DigitalOcean, Netlify</p>
   </Layout>
